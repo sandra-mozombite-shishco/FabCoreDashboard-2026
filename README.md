@@ -1,4 +1,11 @@
-# Quarto Dashboard Project
+# FabCore Dashboard 2026
+
+Interactive dashboard for managing academic manufacturing projects at FabCore Lab.
+
+## Tech stack
+- Quarto
+- Python
+- Git + GitHub
 
 ## Requirements
 - Quarto (portable)
@@ -12,4 +19,11 @@
 
 ## Notes
 - No admin permissions required
-- Tools live in `D:\tools`
+- Tools live in `D:\Portables`
+
+## Status
+🚧 In development
+
+## Author
+Sandra Mozombite
+(moshivuu)

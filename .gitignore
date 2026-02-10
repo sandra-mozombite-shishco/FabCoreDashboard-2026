@@ -5,6 +5,7 @@
 _site/
 _site/*
 *.html
+**/*.quarto_ipynb
 
 # VS Code
 #.vscode/settings.json

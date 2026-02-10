@@ -1,3 +1,15 @@
 project:
   type: website
   output-dir: docs
+
+website:
+  title: "FabCore Dashboard 2026"
+
+# Global Engine: All files will use your portable venv kernel
+jupyter: FabCore-Dashboard2026
+
+format:
+  dashboard:
+    orientation: columns
+    theme: flatly
+    #logo: logo.png  # Optional: adds professional touch

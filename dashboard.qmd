@@ -1,6 +1,0 @@
----
-title: "Dashboard 2026"
-format:
-  dashboard:
-    orientation: columns
----

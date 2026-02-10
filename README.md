@@ -25,5 +25,5 @@ Interactive dashboard for managing academic manufacturing projects at FabCore La
 🚧 In development
 
 ## Author
-Sandra Mozombite
+Sandra Mozombite Shishco
 (moshivuu)

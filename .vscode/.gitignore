@@ -1,0 +1,22 @@
+# Quarto
+/.quarto/
+/*_files/
+/*_cache/
+_site/
+_site/*
+*.html
+
+# VS Code
+#.vscode/settings.json
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Data (optional – depends on policy)
+#/data/raw/*.csv
+
+# OS
+.DS_Store
+Thumbs.db

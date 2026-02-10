@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"PATH": "D:\\Portables\\Quarto-1.8.27-win\\bin;D:\\Portables\\Git\\bin;${env:PATH}"
+		},
+		"quarto.path": "D:\\Portables\\Quarto-1.8.27-win\\bin\\quarto.exe"
+	}
+}

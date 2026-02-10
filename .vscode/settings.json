@@ -1,0 +1,23 @@
+{
+  // --- Portable tools (NO admin needed) ---
+  "terminal.integrated.env.windows": {
+    "PATH": 
+    "D:\\Portables\\Quarto-1.8.27-win\\bin;D:\\Portables\\Git\\bin;${env:PATH}"
+  },
+
+  // --- Explicit tool paths (avoids guessing) ---
+  "git.path": "D:\\Portables\\Git\\bin\\git.exe",
+  "quarto.path": "D:\\Portables\\Quarto-1.8.27-win\\bin\\quarto.exe",
+
+
+  // --- Python integration ---
+  "python.defaultInterpreterPath": "python",
+  "python.terminal.activateEnvironment": true,
+
+  // --- Quarto UX ---
+  "quarto.renderOnSave": false,
+
+  // --- Editor sanity ---
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay"
+}

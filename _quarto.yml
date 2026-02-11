@@ -4,9 +4,12 @@ project:
 
 website:
   title: "FabCore Dashboard 2026"
+#  to hide all of the executable source code used to produce dynamic outputs.
+execute:
+  echo: false
 
 # Global Engine: All files will use your portable venv kernel
-jupyter: FabCore-Dashboard2026
+#jupyter: fabcore-dashboard2026
 
 format:
   dashboard:

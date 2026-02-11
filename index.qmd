@@ -6,7 +6,6 @@ title: "Dashboard 2026"
 
 ### Signal Plot
 ```{python}
-#| echo: false
 import plotly.express as px
 import pandas as pd
 import numpy as np
@@ -20,4 +19,6 @@ df = pd.DataFrame({'Seconds': t, 'Voltage (mV)': v})
 fig = px.line(df, x='Seconds', y='Voltage (mV)', title="Real-time Sensor Simulation")
 
 # 3. Display it
-fig.show()
+fig
+
+```

@@ -11,5 +11,5 @@ jupyter: FabCore-Dashboard2026
 format:
   dashboard:
     orientation: columns
-    theme: flatly
+    theme: lux
     #logo: logo.png  # Optional: adds professional touch

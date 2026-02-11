@@ -4,7 +4,7 @@
 /*_cache/
 _site/
 _site/*
-*.html
+#*.html
 **/*.quarto_ipynb
 
 # VS Code

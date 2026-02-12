@@ -33,15 +33,23 @@ Before you start, download and extract these portable tools:
    ```powershell
    python -m venv .venv
    ```
-
+   But if you are using a portable WinPython
+    ```powershell
+  [Path-to-Portable-Python]\python.exe -m venv .venv
+   ```
 3. **Activate virtual environment:**
    ```powershell
-   & .\.venv\Scripts\Activate.ps1
+   .\.venv\Scripts\activate
    ```
 
 4. **Install dependencies:**
    ```powershell
    pip install -r requirements.txt
+   ```
+
+5. **Create a unique kernell:**
+   ```powershell
+   .\.venv\Scripts\python.exe -c "import sys; print(sys.executable); print(sys.version)"
    ```
 
 ## How to run

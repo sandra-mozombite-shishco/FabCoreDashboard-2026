@@ -9,6 +9,11 @@
         "kind": "build",
         "isDefault": true
       },
+      "options": {
+        "env": {
+          "QUARTO_PYTHON": "${workspaceFolder}\\.venv\\Scripts\\python.exe"
+        }
+      },
       "presentation": {
         "reveal": "always"
       }

@@ -23,9 +23,22 @@ df_operation = pd.read_csv(os.path.join(data_dir, 'PythonTest_RegistroUso.csv'),
 df_users = pd.read_csv(os.path.join(data_dir, 'PythonTest_Usuarios.csv'), sep=';', encoding='latin-1')
 df_courses = pd.read_csv(os.path.join(data_dir, 'PythonTest_CursosPUCP.csv'), sep=';', encoding='latin-1')
 
+# Generate fab_id for users, just for quick identification in the dashboard (not used for joins)
+df_users.insert(
+    0,  # posición 0 = primera columna
+    "fab_id",
+    [f"FabUser2026-{str(i+1).zfill(5)}" for i in range(len(df_users))]
+)
+
+# Join fab_id to operation for easier tracking in the dashboard
+df_operation = pd.merge(df_operation, df_users[['DNI', 'fab_id']], on='DNI', how='left')
+
+
+# Delete leading/trailing spaces from column names
 df_operation.columns = df_operation.columns.str.strip()
 df_courses.columns = df_courses.columns.str.strip()
 df_users.columns = df_users.columns.str.strip()
+
 # Quick look at the raw data in the Interactive Window
 print("Raw operation Data:")
 display(df_operation.head()) 
@@ -57,13 +70,14 @@ df_master = pd.merge(df_operation, df_users[['DNI', 'Carrera']], on='DNI', how='
 df_master = pd.merge(df_master, df_courses[['CODIGO', 'NOMBRE']], left_on='Course', right_on='CODIGO', how='left')
 
 # Cleaning, renaming and sort columns for clarity
-df_master = df_master.drop(columns=['CODIGO'])
+df_master = df_master.drop(columns=['CODIGO', 'DNI', 'Code', 'Name'])
 df_master = df_master.rename(columns={'NOMBRE': 'Nombre Curso'})
+
 
 df_master = df_master.rename(columns={
     'Date': 'Dia',
     'Hour': 'Hora',
-    'Code': 'Codigo PUCP',
+    'fab_id': 'Usuario FAB',
     'FabCore Staff': 'FabCore staff',
     'Service': 'Servicio',
     'UseTime': 'Tiempo uso',
@@ -78,8 +92,7 @@ df_master = df_master[[
     'Timestamp',
     'Dia',
     'Hora',
-    'DNI',
-    'Codigo PUCP',
+    'Usuario FAB',
     'FabCore Nodo',
     'FabCore staff',
     'Servicio',

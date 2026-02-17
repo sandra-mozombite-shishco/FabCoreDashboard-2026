@@ -15,8 +15,12 @@ __pycache__/
 .venv/
 *.pyc
 
-# Data (optional – depends on policy)
-#/data/raw/*.csv
+# Data
+data/FabCore_Usage_Data_Expanded.csv
+data/Processed_Dashboard_Data.csv
+data/PythonTest_RegistroUso.csv
+data/PythonTest_Usuarios.csv
+data/PythonTest_Cursos.csv
 
 # OS
 .DS_Store

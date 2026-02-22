@@ -25,7 +25,7 @@ jobs:
       - name: Run script
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-        run: python fetch_data_from_sheets.py
+        run: python scripts/fetch_data_from_sheets.py
 
       - name: Commit and push
         run: |
